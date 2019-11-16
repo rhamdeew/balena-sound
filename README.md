@@ -50,6 +50,13 @@ Secondly, balenaSound will play connection/disconnection notification sounds at 
 
 **Note:** these variables should be defined as integer values without the `%` symbol.
 
+### Bluetooth Scripts
+
+By default, balenaSound will run no scripts at connect and disconnect of a bluetooth device. If you would like to activate this, set the `BLUETOOTH_SCRIPTS` environment variable to `true`.
+There are two python scripts in the `./bluetooth-audio/bluetooh-scripts/` directory, which run on connect and disconnect. If you would like to control over GPIO a external amplifier can you use gpiozero which is preinstalled. 
+
+**Note:** Don´t forget to go back to the root directory of this project before you push it in the next step.
+
 ### Deploy this application
 
 * Install the [balena CLI tools](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)
